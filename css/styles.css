@@ -16,6 +16,29 @@ body {
     left: 50%;
 
 }
+#cloud {
+    height: 200px;
+    width: auto;
+    position: absolute;
+}
+
+#flower {
+    height: 200px;
+    width: auto;
+    position: absolute;
+}
+
+#bird {
+    height: 200px;
+    width: auto;
+    position: absolute;
+}
+
+#bee {
+    height: 200px;
+    width: auto;
+    position: absolute;
+}
 
 #wateringcan {
     width: 200px;
