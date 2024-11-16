@@ -1,68 +1,142 @@
+/* General styles*/
 html,
 body {
-    height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8ee593;
+  font-family: Arial, sans-serif;
 }
 
-
-#butterfly {
-    height: 200px;
-    width: auto;
-    position: absolute;
+#garden {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none; /* Prevent default gestures on mobile */
+}
+/* Sky, sun, and stars */
+#sky {
+  position: fixed;
+  width: 100vw;
+  height: 50vh;
+  background: linear-gradient(to bottom, #87ceeb, #c1f0c1);
+  transition: background 2s;
 }
 
-#tree {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-
+#sun {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background: yellow;
+  border-radius: 50%;
+  bottom: 10%;
+  left: 42%;
+  transition: all 3s;
+  z-index: 1;
 }
 
-#wateringcan {
-    width: 200px;
-    position: fixed;
-    bottom: 20%;
-    left: 40%;
+#stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(white 2px, transparent 2px);
+  background-size: 50px 50px;
+  opacity: 0;
+  transition: opacity 3s;
+  z-index: 0;
 }
 
-
-.waterdrop {
-    width: 20px;
-}
-
+/* Net */
+/* Net */
 #net {
-    height: 600px;
-    width: auto;
-    position: absolute;
+  position: absolute;
+  width: 10vw;
+}
 
+/* Butterfly */
+#butterfly {
+  height: 150px;
+  width: auto;
+  position: absolute;
+  transition: top 1s, left 1s;
+  z-index: 5;
+}
+
+/* Tree and apples */
+#tree {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 40vw;
+  height: auto;
+  z-index: 1;
 }
 
 .apple {
-    height: 50px;
-    width: auto;
-    position: absolute;
-}
-
-#tree {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-
+  position: absolute;
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 1s linear, top 1s linear, left 1s linear;
+  z-index: 5;
 }
 
 .basket {
-    width: 200px;
-    position: fixed;
-    bottom: 20px;
-    left: 20%;
-
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 200px;
+  height: auto;
+  z-index: 2;
 }
 
+/* Watering can */
+#wateringcan {
+  position: fixed;
+  bottom: 10%;
+  left: 30%;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  z-index: 3;
+}
+
+/* Waterdrops */
+.waterdrop {
+  position: absolute;
+  display: none;
+  width: 20px;
+  z-index: 2;
+}
+
+/* Responsive design adjustments */
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #sun {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  #butterfly {
+    width: 12vw;
+  }
+
+  .apple {
+    width: 8vw;
+  }
+
+  #wateringcan {
+    width: 15vw;
+  }
+}
 
 body {
-    margin: 0px;
-    background-image: url("../images/grass.png");
-    background-attachment: fixed;
-    background-repeat: repeat-x;
-    background-position: bottom;
-    overflow: hidden;
+  margin: 0px;
+  background-image: url("../images/grass.png");
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  overflow: hidden;
 }
