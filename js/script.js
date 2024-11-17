@@ -12,9 +12,7 @@ $(document).ready(function () {
     });
   });
 
-  // Butterfly behavior (using jQuery animations)
-
-  // Move the butterfly to a random position
+  // Butterfly behavior (using jQuery animations),  Move the butterfly to a random position
   function moveButterflyRandomly() {
     const gardenWidth = $(window).width(); // Width of the window
     const gardenHeight = $(window).height(); // Height of the window
