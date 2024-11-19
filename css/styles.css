@@ -27,6 +27,9 @@ body {
 
 .waterdrop {
   width: 20px;
+  position: absolute;
+  top: 500px;
+  left: 500px;
 }
 
 #net {
@@ -44,7 +47,6 @@ body {
 #apple1 {
   left: 1000px;
   top: 100px;
-  transition: transform 2s ease-in-out;
 }
 #apple2 {
   left: 1150px;
